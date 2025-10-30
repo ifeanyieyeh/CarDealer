@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CarDealer.Models.Cars
+
+<h2>Add a new Car</h2>
+<form method="post" enctype="multipart/form-data">
+    <div><input name="CarName" placeholder="Title" required class="form-control" /></div>
+    <div><input name="CarMake" placeholder="Make" class="form-control" /></div>
+    <div><input name="CarModel" placeholder="Model" class="form-control" /></div>
+    <div><input name="YearOfProduction" placeholder="Year" class="form-control" /></div>
+    <div><input name="CarPrice" placeholder="Price" class="form-control" /></div>
+    <div><textarea name="CarDescription" placeholder="Description" class="form-control"></textarea></div>
+    <div><input type="file" name="image" class="form-control" /></div>
+    <button type="submit" class="btn btn-primary mt-2">Save</button>
+</form>

@@ -1,0 +1,14 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<CarDealer.Models.Cars>
+
+<h2>Admin Dashboard</h2>
+<a href="/Admin/AddCar" class="btn btn-success mb-3">Add a Car</a>
+<table class="table table-striped">
+    <tr><th>Car Name</th><th>Car Make</th><th>Car Model</th><th>Year of Production</th><th>Car Price</th></tr>
+    @foreach (var c in Model)
+    {
+        <tr><td>@c.CarName</td><td>@c.CarMake</td><td>@c.CarModel</td><td>@c.YearOfProduction</td><td>₦@c.CarPrice.ToString("N0")</td></tr>
+    }
+</table>

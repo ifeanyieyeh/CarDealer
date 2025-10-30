@@ -1,0 +1,18 @@
+﻿@model CarDealer.Models.Admin
+
+<h2>Admin Login</h2>
+
+<form asp-action="Login" asp-controller="Admin" method="post" class="mt-3">
+    <div class="mb-3">
+        <input type="text" name="EmailorUsername" placeholder="Username" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <input type="password" name="Password" placeholder="Password" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Login</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <p class="text-danger">@ViewBag.Error</p>
+}

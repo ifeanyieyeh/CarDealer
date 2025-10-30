@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 1,
+    "CarName": "Toyota Corolla",
+    "CarMake": "toyota",
+    "CarModel": "2022",
+    "YearOfProduction": 2022,
+    "CarPrice": 0,
+    "CarDescription": "Toyota is good",
+    "CarImagePath": "/uploads/Ify m.jpg"
+  }
+]

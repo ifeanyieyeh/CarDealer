@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Details";
+}
+@model CarDealer.Models.Cars
+
+<div class="container mt-4">
+    <h2>@Model.CarName</h2>
+
+    <img src="@Model.CarImagePath" class="img-fluid mb-3 rounded shadow-sm" alt="@Model.CarName" />
+    <p><strong>Make:</strong> @Model.CarMake</p>
+    <p><strong>Model:</strong> @Model.CarModel</p>
+    <p><strong>Year:</strong> @Model.YearOfProduction</p>
+    <p><strong>Price:</strong> ₦@Model.CarPrice.ToString("N0")</p>
+    <p>@Model.CarDescription</p>
+
+    <hr />
+
+    <h3>Send Enquiry</h3>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">@ViewBag.Message</div>
+    }
+    <form asp-action="Enquiry" asp-controller="Home" method="post">
+        <input type="hidden" name="carId" value="@Model.Id" />
+        <div class="mb-3">
+            <input type="text" name="carname" placeholder="Your Name" required class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input type="email" name="emailaddress" placeholder="Email" required class="form-control" />
+        </div>
+        <div class="mb-3">
+            <textarea name="message" placeholder="Message" required class="form-control" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Send Inquiry</button>
+    </form>
+</div>
+

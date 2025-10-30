@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home";
+}
+@model IEnumerable<CarDealer.Models.Cars>
+
+<div class="container mt-4">
+    <h2>Cars Available</h2>
+    <div class="row">
+        @foreach (var car in Model)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="@car.CarImagePath" class="card-img-top" alt="@car.CarName" style="height:200px; object-fit:cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@car.CarName</h5>
+                        <p class="card-text">
+                            @car.CarMake @car.CarModel (@car.YearOfProduction)<br />
+                            <strong>₦@car.CarPrice.ToString("N0")</strong>
+                        </p>
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@car.Id" class="btn btn-primary w-100">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
