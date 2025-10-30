@@ -8,5 +8,15 @@
     "CarPrice": 0,
     "CarDescription": "Toyota is good",
     "CarImagePath": "/uploads/Ify m.jpg"
+  },
+  {
+    "Id": 2,
+    "CarName": "fine car",
+    "CarMake": "honda",
+    "CarModel": "honda",
+    "YearOfProduction": 2021,
+    "CarPrice": 2023,
+    "CarDescription": "i love cars",
+    "CarImagePath": "/uploads/1st.jpg"
   }
 ]
