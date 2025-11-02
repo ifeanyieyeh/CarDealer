@@ -1,8 +1,8 @@
-﻿@model CarDealer.Models.Cars
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Car Details";
 }
+@model CarDealer.Models.Cars
 
 <div class="container mt-4">
     <h2>@Model.CarName</h2>
@@ -14,7 +14,8 @@
     <p><strong>Price:</strong> ₦@Model.CarPrice.ToString("N0")</p>
     <p>@Model.CarDescription</p>
 
-    <a asp-controller="Enquiry" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-success mt-2">
+  
+    <a asp-controller="Home" asp-action="Enquiry" asp-route-id="@Model.Id" class="btn btn-success mt-2">
         Enquire Now
     </a>
 
