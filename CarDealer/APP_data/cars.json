@@ -18,5 +18,15 @@
     "CarPrice": 2023,
     "CarDescription": "i love cars",
     "CarImagePath": "/uploads/1st.jpg"
+  },
+  {
+    "Id": 3,
+    "CarName": "Toyota Corolla",
+    "CarMake": "toyota",
+    "CarModel": "2022",
+    "YearOfProduction": 2022,
+    "CarPrice": 2023,
+    "CarDescription": "hi car",
+    "CarImagePath": "/uploads/1st.jpg"
   }
 ]
