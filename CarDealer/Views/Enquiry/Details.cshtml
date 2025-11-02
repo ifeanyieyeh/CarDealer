@@ -7,7 +7,7 @@
 <div class="container mt-4">
     <h2>@Model.CarName</h2>
 
-    <img src="@Model.CarImagePath" class="img-fluid mb-3 rounded shadow-sm" alt="@Model.CarName" />
+    <img src="@Model.CarImagePath" class="img-fluid mb-3 rounded shadow-sm" alt="@Model.CarName" style="max-width:100%; height:auto; display:block; position:relative; z-index:1;" />
     <p><strong>Make:</strong> @Model.CarMake</p>
     <p><strong>Model:</strong> @Model.CarModel</p>
     <p><strong>Year:</strong> @Model.YearOfProduction</p>
@@ -23,3 +23,6 @@
         Back to Listing
     </a>
 </div>
+
+
+
